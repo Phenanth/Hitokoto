@@ -3,7 +3,7 @@
 	<div class="home container-fluid">
 		<div class="row">
 			<div class="top">
-				<div class="trans">1</div>
+				<!-- <div class="trans">1</div> -->
 				<div class="triangle">
 					<div class="triangleLeft"></div>
 					<div class="triangleRight"></div>
@@ -35,7 +35,6 @@
 		position: fixed;
 		display: flex;
 		flex-wrap: wrap;
-		align-content: space-between;
 		top:0px;
 		left: 0px;
 		background-color: #FEDB42;
@@ -48,7 +47,7 @@
 	.triangle{
 		display: flex;
 		justify-content: space-between;
-		align-items: center;
+		align-self: flex-end;
 		width: 100%;
 		flex-basis: 100%;
 	}
@@ -56,10 +55,12 @@
 		flex-basis: 100%;
 		display: flex;
 		justify-content: center;
+		align-self: flex-end;
 	}
 	.dot1, .dot2, .dot3{
 		width: 10px;
 		height: 10px;
+		background: lightgray;
 		border-width: 1px;
 		border-style: solid;
 		border-color: black;
