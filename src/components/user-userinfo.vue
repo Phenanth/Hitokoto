@@ -5,7 +5,7 @@
 		<div class="usrinfo-header">
 			<div class="usrinfo-back">
 				<img src="../../static/svg/back.svg" width="25px">
-				<span>Back</span>
+				<span v-on:click="goTo('/user/controller')">Back</span>
 			</div>
 			<h2>User Info.</h2>
 		</div>
@@ -18,11 +18,52 @@
 			<span>User Name</span>
 		</div>
 
+		<!-- User Info. -->
+		<div class="usrinfo-info">
+			<div class="info-box">
+				<span class="info-text">ID</span>
+				<span class="info-text gray">2015210405001</span>
+			</div>
+			<div class="info-box">
+				<span class="info-text">Sex</span>
+				<span class="info-text gray">F.</span>
+			</div>
+			<div class="info-box">
+				<span class="info-text">Phone</span>
+				<span class="info-text gray">18058395082</span>
+			</div>
+			<div class="info-box">
+				<span class="info-text">We Chat</span>
+				<span class="info-text gray">???</span>
+			</div>
+		</div>
 
+		<div class="usrinfo-ctl">
+			<button class="btn btn-logout" v-on:click="alertNotFinished()">Log out</button>
+		</div>
 	</div>
 </template>
-<script></script>
+<script>
+import router from '../router'
+export default {
+	name: 'userinfo',
+	methods: {
+		goTo: function (routes) {
+			router.push(routes)
+		},
+		alertNotFinished: function () {
+			alert('Function not finished.')
+		}
+	}
+}
+</script>
 <style>
+.userinfo {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+
 .usrinfo-header > h2 {
 	color: #332B05;
 }
@@ -62,7 +103,7 @@
 	left: 0px;
 	top: 15%;
 	position: fixed;
-	background-color:  #FEDB42;
+	background-color: #FEDB42;
 	box-shadow: 0px 1px 5px lightgray;
 }
 
@@ -78,4 +119,50 @@
 	border-radius: 40px; 
 	margin-bottom: 2%;
 } 
+
+.usrinfo-info {
+	position: fixed;
+	top: 35%;
+	left: 0%;
+	width: 100%;
+	height: 50%;
+	display: flex;
+	flex-direction: column;
+}
+
+.info-box {
+	height: 15%;
+	width: 100%;
+	margin-top: 5px;
+	padding: 20px;
+	border-bottom: 1px solid lightgray;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.info-text {
+	font-size: 18px;
+}
+
+span.gray {
+	color: gray;
+}
+
+.usrinfo-ctl {
+	position: fixed;
+	bottom: 18%;
+	width: 100%;
+}
+
+.btn-logout {
+	width: 50%;
+	background-color: #332B05;
+	color: #E6D588;
+}
+
+.btn-logout:active, .btn-logout:hover {
+	color: #E6D588;
+	border: 1px solid #332B05;
+}
 </style>

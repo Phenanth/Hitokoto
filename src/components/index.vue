@@ -3,15 +3,25 @@
 	<div class="index container-fluid">
 		<div class="row">
 			<div class="footer">
-				<div class="mainFunction"></div>
-				<div class="mainFunction"></div>
-					<div class="mainFunction"></div>
+				<div class="mainFunction" v-on:click="goTo('/reminder')"></div>
+				<div class="mainFunction" v-on:click="goTo('/home')"></div>
+				<div class="mainFunction" v-on:click="goTo('/user/')"></div>
 				</div>
 		</div>
 		<router-view/>
 	</div>
 </template>
-<script></script>
+<script>
+import router from '../router'
+export default {
+	name: 'home',
+	methods: {
+		goTo: function (routes) {
+			router.push(routes)
+		}
+	}
+}
+</script>
 <style>
 .footer {
 	display: flex;
