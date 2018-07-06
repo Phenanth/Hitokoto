@@ -19,20 +19,50 @@
 			<div class="home-middle">
 				<div class="home-picture">
 					<div>
-						<img src="../../static/svg/word.svg" height="75%">&nbsp;&nbsp;
+						<img src="../../static/svg/word.svg" height="70%">
 						<h4>每日一言</h4>
-						<img src="../../static/svg/divide.svg" height="100%">
-						<img src="../../static/svg/word.svg" height="75%">&nbsp;&nbsp;
+						<img src="../../static/svg/divide.svg" height="105%">
+						<img src="../../static/svg/test.svg" height="60%">
 						<h4>测试体质</h4>
 					</div>
 				</div>
 				<div class="home-content">
 					<ul>
-						<li></li>
-						<li></li>
-						<li></li>
-						<li></li>
-						<li></li>
+						<li>
+							<img src="../../static/svg/pic.svg">
+							<div>
+								<h3>标题</h3>
+								<h5>简介...</h5>
+							</div>
+						</li>
+						<li>
+							<img src="../../static/svg/pic.svg">
+							<div>
+								<h3>标题</h3>
+								<h5>简介...</h5>
+							</div>
+						</li>
+						<li>
+							<img src="../../static/svg/pic.svg">
+							<div>
+								<h3>标题</h3>
+								<h5>简介...</h5>
+							</div>
+						</li>
+						<li>
+							<img src="../../static/svg/pic.svg">
+							<div>
+								<h3>标题</h3>
+								<h5>简介...</h5>
+							</div>
+						</li>
+						<li>
+							<img src="../../static/svg/pic.svg">
+							<div>
+								<h3>标题</h3>
+								<h5>简介...</h5>
+							</div>
+						</li>
 					</ul>
 				</div>
 			</div>
@@ -121,7 +151,7 @@
 		padding:20px;
 		padding-top: 0px;
 		padding-bottom: 0px;
-		height: 22%;
+		height: 18%;
 		flex-basis: 100%;
 		display: flex;
 		justify-content: space-between;
@@ -132,30 +162,49 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		width: 42%;
-		height: 55%;
-		/*background: lightgray;*/
+		width: 100%;
+		height: 70%;
+		color: grey;
+	}
+	.home-picture div img:nth-child(3n+1){
+		margin-right: 12px;
 	}
 	.home-content{
 		background-color: #F5F5F5;
 		overflow: auto;
-		height: 78%;
+		height: 82%;
 		width: 100%;
 		display: flex;
-	}
-	.home-content li{
-		background-color: white;
-		margin-bottom:15px;
-		display: block;
-		list-style: none;
-		height: 35%;
-		width: 100%;
-	}
-	.home-content li:last-child{
-		margin-bottom:0px;
 	}
 	.home-content ul{
 		padding-left: 0px;
 		width: 100%;
+	}
+	.home-content li{
+		padding-left: 30px;
+		display: flex;
+		align-items: center;
+		background-color: white;
+		margin-bottom:15px;
+		list-style: none;
+		height: 42%;
+		width: 100%;
+	}
+	.home-content li img{
+		height:62%;
+		width:26%; 
+	}
+	.home-content li div{
+		text-align: left;
+		margin-left: 20px;
+	}
+	.home-content li div h3{
+		margin-top: 0px;
+	}
+	.home-content li div h5{
+		color: grey;
+	}
+	.home-content li:last-child{
+		margin-bottom:0px;
 	}
 </style>
