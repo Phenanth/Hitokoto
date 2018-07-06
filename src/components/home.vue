@@ -6,8 +6,10 @@
 				<div class="home-header">
 					<h2>Home</h2>
 				</div>
+
 				<div class="home-triangle">
 					<div class="triangleLeft"></div>
+					<img src="../../static/svg/pic1.svg" height="100vh">
 					<div class="triangleRight"></div>
 				</div>
 				<div class="home-dot">
