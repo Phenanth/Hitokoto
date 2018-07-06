@@ -2,23 +2,26 @@
 <template>
 	<div class="home container-fluid">
 		<div class="row">
-			<div class="top">
-				<div class="triangle">
+			<div class="home-top">
+				<div class="home-header">
+					<h2>Home</h2>
+				</div>
+				<div class="home-triangle">
 					<div class="triangleLeft"></div>
 					<div class="triangleRight"></div>
 				</div>
-				<div class="dot">
+				<div class="home-dot">
 					<div></div>
 					<div></div>
 					<div></div>
 				</div>
 			</div>
-			<div class="middle">
-				<div class="picture">
+			<div class="home-middle">
+				<div class="home-picture">
 					<div></div>
 					<div></div>
 				</div>
-				<div class="content">
+				<div class="home-content">
 					<ul>
 						<li></li>
 						<li></li>
@@ -33,6 +36,41 @@
 </template>
 <script></script>
 <style>
+	.home-top{
+		padding-top: 15%;
+		position: fixed;
+		display: flex;
+		flex-wrap: wrap;
+		top:0px;
+		left: 0px;
+		background-color: #FEDB42;
+		width: 100%;
+		height: 35%;
+		box-shadow:0px 1px 5px lightgray;
+	}
+	.home-triangle{
+		margin-top:15%;
+		display: flex;
+		justify-content: space-between;
+		align-self: flex-end;
+		width: 100%;
+		flex-basis: 100%;
+	}
+	.home-header > h2 {
+			color: #332B05;
+		}
+
+	.home-header {
+		top: 0%;
+		left: 0%;
+		height: 15%;
+		width: 100%;
+		position: fixed;
+		display: flex;
+		align-items: flex-end;
+		justify-content: center;
+		background-color: #FEDB42;
+	}
 	.triangleLeft,.triangleRight{
 		width: 0;
 		height: 0;
@@ -47,32 +85,13 @@
 		border-color: transparent transparent transparent #332B05;
 		float: right;
 	}
-	.top{
-		padding-top: 15%;
-		position: fixed;
-		display: flex;
-		flex-wrap: wrap;
-		top:0px;
-		left: 0px;
-		background-color: #FEDB42;
-		width: 100%;
-		height: 30%;
-		box-shadow:0px 1px 5px lightgray;
-	}
-	.triangle{
-		display: flex;
-		justify-content: space-between;
-		align-self: flex-end;
-		width: 100%;
-		flex-basis: 100%;
-	}
-	.dot {
+	.home-dot {
 		flex-basis: 100%;
 		display: flex;
 		justify-content: center;
 		align-self: flex-end;
 	}
-	.dot div{
+	.home-dot div{
 		width: 10px;
 		height: 10px;
 		background: lightgray;
@@ -84,16 +103,16 @@
 		margin-right: 2%;
 		margin-bottom: 2%;
 	}
-	.middle{
+	.home-middle{
 		position: fixed;
 		display: flex;
 		flex-wrap: wrap;
-		top: 30%;
+		top: 35%;
 		left: 0px;
 		width: 100%;
-		height: 54%;
+		height: 49%;
 	}
-	.picture{
+	.home-picture{
 		height: 22%;
 		flex-basis: 100%;
 		display: flex;
@@ -101,20 +120,20 @@
 		align-items: center;
 		border-bottom:1px solid lightgray;
 	}
-	.picture div{
+	.home-picture div{
 		width: 42%;
 		height: 55%;
 		background: lightgray;
 		border-radius: 5px;
 	}
-	.content{
+	.home-content{
 		background-color: #F5F5F5;
 		overflow: auto;
 		height: 78%;
 		width: 100%;
 		display: flex;
 	}
-	li{
+	.home-content li{
 		background-color: white;
 		margin-bottom:15px;
 		display: block;
@@ -122,10 +141,10 @@
 		height: 35%;
 		width: 100%;
 	}
-	li:last-child{
+	.home-content li:last-child{
 		margin-bottom:0px;
 	}
-	ul{
+	.home-content ul{
 		padding-left: 0px;
 		width: 100%;
 	}
