@@ -8,12 +8,12 @@
 				</div>
 				<div class="reminder-record">
 					<div>
-						<div>1</div>
-						<div>已完成</div>
+						<h4>1</h4>
+						<h4>已完成</h4>
 					</div>
 					<div>
-						<div>2</div>
-						<div>未完成</div>
+						<h4>2</h4>
+						<h4>未完成</h4>
 					</div>
 				</div>
 			</div>

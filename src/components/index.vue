@@ -3,10 +3,19 @@
 	<div class="index container-fluid">
 		<div class="row">
 			<div class="footer">
-				<div class="mainFunction" v-on:click="goTo('/reminder')"></div>
-				<div class="mainFunction" v-on:click="goTo('/home')"></div>
-				<div class="mainFunction" v-on:click="goTo('/user/')"></div>
+				<div class="mainFunction" v-on:click="goTo('/reminder')">
+					<img src="../../static/svg/reminder.svg" height="55%">
+					<span>Reminder</span>
 				</div>
+				<div class="mainFunction" v-on:click="goTo('/home')">
+					<img src="../../static/svg/home.svg" height="55%">
+					<span>Home</span>
+				</div>
+				<div class="mainFunction" v-on:click="goTo('/user/')">
+					<img src="../../static/svg/user.svg" height="55%">
+					<span>User</span>
+				</div>
+			</div>
 		</div>
 		<router-view/>
 	</div>
@@ -37,9 +46,12 @@ export default {
 }
 .mainFunction {
 	display: flex;
-	width: 15%;
-	height: 60%;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	border-radius: 6px;
+	width: 23%;
+	height: 62%;
 	background-color: #FEDB42;
 }
-
 </style>

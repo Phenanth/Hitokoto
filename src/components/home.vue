@@ -18,8 +18,13 @@
 			</div>
 			<div class="home-middle">
 				<div class="home-picture">
-					<div></div>
-					<div></div>
+					<div>
+						<img src="../../static/svg/word.svg" height="75%">&nbsp;&nbsp;
+						<h4>每日一言</h4>
+						<img src="../../static/svg/divide.svg" height="100%">
+						<img src="../../static/svg/word.svg" height="75%">&nbsp;&nbsp;
+						<h4>测试体质</h4>
+					</div>
 				</div>
 				<div class="home-content">
 					<ul>
@@ -113,18 +118,23 @@
 		height: 49%;
 	}
 	.home-picture{
+		padding:20px;
+		padding-top: 0px;
+		padding-bottom: 0px;
 		height: 22%;
 		flex-basis: 100%;
 		display: flex;
-		justify-content: space-around;
+		justify-content: space-between;
 		align-items: center;
 		border-bottom:1px solid lightgray;
 	}
 	.home-picture div{
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		width: 42%;
 		height: 55%;
-		background: lightgray;
-		border-radius: 5px;
+		/*background: lightgray;*/
 	}
 	.home-content{
 		background-color: #F5F5F5;
