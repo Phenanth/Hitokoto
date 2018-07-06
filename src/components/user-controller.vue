@@ -4,6 +4,8 @@
 		<!-- Header -->
 		<div class="usr-header">
 			<h2>Controller</h2>
+			<!-- Navigation to User Info. page -->
+			<img src="../../static/svg/set.svg" height="4.5%" v-on:click="goTo('/user/userinfo')">
 		</div>
 
 		<!-- Icon and Username -->
@@ -14,20 +16,25 @@
 			<span>User Name</span>
 		</div>
 
-		<!-- Navigation to User Info. page -->
-		<div class="nav-tab" v-on:click="goTo('/user/userinfo')">
-			<span>User Info.</span>
-			<img src="../../static/svg/more.svg" width="9%">
+		<!-- Control Bar -->
+		<div class="ctl-boxs">
+			<div class="ctl-box" v-on:click="alertNotFinished()">
+				<img src="../../static/svg/electrical.svg" height="55%">
+				<span>Switches</span>
+			</div>
+			<div class="ctl-box" v-on:click="alertNotFinished()">
+				<img src="../../static/svg/video.svg" height="55%">
+				<span>Cameras</span>
+			</div>
+			<div class="ctl-box" v-on:click="alertNotFinished()">
+				<img src="../../static/svg/lights.svg" height="55%">
+				<span>Lights</span>
+			</div>
+			<div class="ctl-box" v-on:click="alertNotFinished()"></div>
+			<div class="ctl-box" v-on:click="alertNotFinished()"></div>
+			<div class="ctl-box" v-on:click="alertNotFinished()"></div>
 		</div>
 
-		<div class="ctl-boxs">
-			<div class="ctl-box"></div>
-			<div class="ctl-box"></div>
-			<div class="ctl-box"></div>
-			<div class="ctl-box"></div>
-			<div class="ctl-box"></div>
-			<div class="ctl-box"></div>
-		</div>
 	</div>
 </template>
 <script>
@@ -37,6 +44,9 @@ export default {
 	methods: {
 		goTo: function (routes) {
 			router.push(routes)
+		},
+		alertNotFinished: function () {
+			alert('Function not finished.')
 		}
 	}
 }
@@ -68,7 +78,7 @@ export default {
 	left: 0px;
 	top: 15%;
 	position: fixed;
-	background-color: #FEDB42;
+	background-color: #FEDB42; /* Yellow */
 	box-shadow: 0px 1px 5px lightgray;
 	font-size: 20px;
 }
@@ -79,38 +89,40 @@ export default {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background: #332B05; /* Yellow */
+	background: #332B05; /* Dark */
 	-moz-border-radius: 40px; 
 	-webkit-border-radius: 40px; 
 	border-radius: 40px; 
 	margin-bottom: 2%;
 } 
+/* #E6D588  Lighter Yellow for text in dark backgrounds. */
 
-.nav-tab {
+/*.nav-tab {
 	position: fixed;
 	top: 35%;
 	left: 0%;
 	width: 100%;
 	height: 8%;
-	color: #E6D588; /* Lighter Yellow for text in dark backgrounds. */
+	color: #E6D588;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: #332B05; /* Dark background */
+	background-color: #332B05; 
 	font-size: 20px;
 }
-
-.nav-tab > img {
+*/
+.usr-header > img {
 	position: fixed;
-	right: 2%;
+	right: 3%;
+	top: 9%;
 }
 
 .ctl-boxs {
 	position: fixed;
-	top: 43%;
+	top: 35%;
 	left: 0px;
 	width: 100%;
-	height: 38%;
+	height: 47%;
 	display: flex;
 	overflow: auto;
 	justify-content: space-around;
@@ -123,6 +135,16 @@ export default {
 	width: 35%;
 	height: 100px;
 	margin-bottom: 25px;
-	background-color: #332B05;
+	background-color: #332B05; /* Dark background */
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.ctl-box > span {
+	color: #FEDB42;
 }
 </style>
