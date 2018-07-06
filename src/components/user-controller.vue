@@ -19,20 +19,29 @@
 		<!-- Control Bar -->
 		<div class="ctl-boxs">
 			<div class="ctl-box" v-on:click="alertNotFinished()">
-				<img src="../../static/svg/electrical.svg" height="55%">
+				<img src="../../static/svg/electrical.svg" height="50%">
 				<span>Switches</span>
 			</div>
 			<div class="ctl-box" v-on:click="alertNotFinished()">
-				<img src="../../static/svg/video.svg" height="55%">
+				<img src="../../static/svg/video.svg" height="50%">
 				<span>Cameras</span>
 			</div>
 			<div class="ctl-box" v-on:click="alertNotFinished()">
-				<img src="../../static/svg/lights.svg" height="55%">
+				<img src="../../static/svg/lights.svg" height="50%">
 				<span>Lights</span>
 			</div>
-			<div class="ctl-box" v-on:click="alertNotFinished()"></div>
-			<div class="ctl-box" v-on:click="alertNotFinished()"></div>
-			<div class="ctl-box" v-on:click="alertNotFinished()"></div>
+			<div class="ctl-box" v-on:click="alertNotFinished()">
+				<img src="../../static/svg/operation.svg" height="50%">
+				<span>Humidity</span>
+			</div>
+			<div class="ctl-box" v-on:click="alertNotFinished()">
+				<img src="../../static/svg/warning.svg" height="50%">
+				<span>Safety</span>
+			</div>
+			<div class="ctl-box" v-on:click="alertNotFinished()">
+				<img src="../../static/svg/Category.svg" height="50%">
+				<span>More</span>
+			</div>
 		</div>
 
 	</div>
