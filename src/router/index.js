@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
+import Loading from '@/components/loading'
 import Index from '@/components/index'
 import Home from '@/components/home'
 import Reminder from '@/components/reminder'
@@ -15,6 +16,10 @@ export default new Router({
   routes: [
     {
       path: '/',
+      redirect: '/loading'
+    },
+    {
+      path: '/index',
       name: 'Index',
       component: Index,
       redirect: '/home',
@@ -29,7 +34,7 @@ export default new Router({
       	},
       	{
       		path: '/user',
-               component: User,
+          component: User,
       		redirect: '/user/controller',
       		children: [
       			{
@@ -43,6 +48,10 @@ export default new Router({
       		]
       	}
       ]
+    },
+    {
+      path: '/loading',
+      component: Loading
     }
   ]
 })

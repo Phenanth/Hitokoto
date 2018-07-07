@@ -28,6 +28,9 @@ export default {
 		goTo: function (routes) {
 			router.push(routes)
 		}
+	},
+	mounted: function () {
+		alert('请手动将浏览器分辨率调到手机屏幕比例以获得最佳体验。')
 	}
 }
 </script>

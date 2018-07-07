@@ -35,6 +35,7 @@
 │   │   └── logo.png
 │   ├── components
 │   │   ├── index.vue
+│   │   ├── loading.vue
 │   │   ├── reminder.vue
 │   │   ├── user-controller.vue
 │   │   ├── user-userinfo.vue
