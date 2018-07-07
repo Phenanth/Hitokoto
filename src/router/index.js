@@ -11,6 +11,7 @@ import Controller from '@/components/user-controller'
 Vue.use(Router)
 
 export default new Router({
+  base: '/hot/',
   routes: [
     {
       path: '/',
