@@ -21,44 +21,48 @@
 			<div class="home-middle">
 				<div class="home-picture">
 					<div>
-						<img src="../../static/svg/word.svg" height="70%">
-						<h4>每日一言</h4>
+						<div v-on:click="alertNotFinished()">
+							<img src="../../static/svg/word.svg" height="85%">
+							<h4>每日一言</h4>
+						</div>
 						<img src="../../static/svg/divide.svg" height="105%">
-						<img src="../../static/svg/test.svg" height="60%">
-						<h4>测试体质</h4>
+						<div v-on:click="alertNotFinished()">
+							<img src="../../static/svg/test.svg" height="70%">
+							<h4>测试体质</h4>
+						</div>
 					</div>
 				</div>
 				<div class="home-content">
 					<ul>
-						<li>
+						<li v-on:click="alertNotFinished()">
 							<img src="../../static/svg/pic.svg">
 							<div>
 								<h3>标题</h3>
 								<h5>简介...</h5>
 							</div>
 						</li>
-						<li>
+						<li v-on:click="alertNotFinished()">
 							<img src="../../static/svg/pic.svg">
 							<div>
 								<h3>标题</h3>
 								<h5>简介...</h5>
 							</div>
 						</li>
-						<li>
+						<li v-on:click="alertNotFinished()">
 							<img src="../../static/svg/pic.svg">
 							<div>
 								<h3>标题</h3>
 								<h5>简介...</h5>
 							</div>
 						</li>
-						<li>
+						<li v-on:click="alertNotFinished()">
 							<img src="../../static/svg/pic.svg">
 							<div>
 								<h3>标题</h3>
 								<h5>简介...</h5>
 							</div>
 						</li>
-						<li>
+						<li v-on:click="alertNotFinished()">
 							<img src="../../static/svg/pic.svg">
 							<div>
 								<h3>标题</h3>
@@ -71,7 +75,16 @@
 		</div>
 	</div>
 </template>
-<script></script>
+<script>
+export default {
+	name: 'home',
+	methods: {
+		alertNotFinished: function () {
+			alert('Function not finished.')
+		}
+	}
+}
+</script>
 <style>
 	.home-top{
 		padding-top: 15%;
@@ -168,8 +181,8 @@
 		height: 70%;
 		color: grey;
 	}
-	.home-picture div img:nth-child(3n+1){
-		margin-right: 12px;
+	.home-picture div img{
+		margin-right: 10px;
 	}
 	.home-content{
 		background-color: #F5F5F5;
