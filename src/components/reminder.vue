@@ -4,7 +4,7 @@
 		<div class="row">
 			<div class="reminder-top">
 				<div class="reminder-header">
-					<h2>Reminder</h2>
+					<h2>日程</h2>
 					<img src="../../static/svg/add.svg" height="4.5%" v-on:click="alertNotFinished()">
 				</div>
 				<div class="reminder-record">
@@ -19,7 +19,7 @@
 				</div>
 			</div>
 			<div class="reminder-middle">
-				<div class="reminder-content">
+				<div class="reminder-content" v-on:click="updateTodos()">
 					<ul>
 						<li>
 							<reminder-item v-bind:title="'Misson One'"></reminder-item>
@@ -43,18 +43,37 @@
 	</div>
 </template>
 <script>
+import store from '../store'
 export default {
 	name: 'reminder',
 	data: function () {
 		return {
 			finished: 0,
-			notFinished: 5
+			notFinished: 0,
+			amount: 0
 		}
 	},
 	methods: {
 		alertNotFinished: function () {
 			alert('Function not finished.')
+		},
+		updateTodos: function () {			
+			let todos = store.getters.showTodos
+			this.finished = todos.finished
+			this.notFinished = todos.notFinished
+			this.amount = todos.amount
 		}
+	},
+	mounted: function () {
+		// 页面加载初始化，将来通过与服务器交互得到数据
+		// 每次切换回此页面，日程状态都会回到全部未完成的状态
+		let opts = {
+			amount: 5,
+			finished: 0,
+			notFinished: 5
+		}
+		store.dispatch('initState', opts)
+		this.updateTodos()
 	}
 }
 </script>

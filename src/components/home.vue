@@ -4,7 +4,7 @@
 		<div class="row">
 			<div class="home-top">
 				<div class="home-header">
-					<h2>Home</h2>
+					<h2>首页</h2>
 				</div>
 
 				<div class="home-triangle">

@@ -15,12 +15,18 @@ Vue.component('reminder-item', {
 	},
 	methods: {
 		toggleTodo: function () {
-			let opt = 0
-			if (this.over) {
-				opt = 1
-			} else {
-				opt = -1
+			let opt = {
+				finishedOpt: 0,
+				notFinishedOpt: 0
 			}
+			if (this.over) {
+				opt.finishedOpt = -1
+				opt.notFinishedOpt = 1
+			} else {
+				opt.finishedOpt = 1
+				opt.notFinishedOpt = -1
+			}
+			store.dispatch('changeState', opt)
 			this.over = !this.over
 		}
 	},

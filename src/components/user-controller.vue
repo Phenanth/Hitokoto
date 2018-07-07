@@ -3,7 +3,7 @@
 	<div class="controller container-fluid">
 		<!-- Header -->
 		<div class="usr-header">
-			<h2>Controller</h2>
+			<h2>家居控制</h2>
 			<!-- Navigation to User Info. page -->
 			<img src="../../static/svg/set.svg" height="4.5%" v-on:click="goTo('/user/userinfo')">
 		</div>
@@ -13,34 +13,34 @@
 			<div id="circle">
 				<img src="../../static/svg/Smile.svg" width="45px">
 			</div>
-			<span>User Name</span>
+			<span>用户名</span>
 		</div>
 
 		<!-- Control Bar -->
 		<div class="ctl-boxs">
 			<div class="ctl-box" v-on:click="alertNotFinished()">
 				<img src="../../static/svg/electrical.svg" height="50%">
-				<span>Switches</span>
+				<span>电器开关</span>
 			</div>
 			<div class="ctl-box" v-on:click="alertNotFinished()">
 				<img src="../../static/svg/video.svg" height="50%">
-				<span>Cameras</span>
+				<span>摄像头</span>
 			</div>
 			<div class="ctl-box" v-on:click="alertNotFinished()">
 				<img src="../../static/svg/lights.svg" height="50%">
-				<span>Lights</span>
+				<span>照明</span>
 			</div>
 			<div class="ctl-box" v-on:click="alertNotFinished()">
 				<img src="../../static/svg/operation.svg" height="50%">
-				<span>Humidity</span>
+				<span>湿温度</span>
 			</div>
 			<div class="ctl-box" v-on:click="alertNotFinished()">
 				<img src="../../static/svg/warning.svg" height="50%">
-				<span>Safety</span>
+				<span>安全</span>
 			</div>
 			<div class="ctl-box" v-on:click="alertNotFinished()">
 				<img src="../../static/svg/Category.svg" height="50%">
-				<span>More</span>
+				<span>更多</span>
 			</div>
 		</div>
 

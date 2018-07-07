@@ -5,15 +5,15 @@
 			<div class="footer">
 				<div class="mainFunction" v-on:click="goTo('/reminder')">
 					<img src="../../static/svg/reminder.svg" height="55%">
-					<span>Reminder</span>
+					<span>日程</span>
 				</div>
 				<div class="mainFunction" v-on:click="goTo('/home')">
 					<img src="../../static/svg/home.svg" height="55%">
-					<span>Home</span>
+					<span>首页</span>
 				</div>
 				<div class="mainFunction" v-on:click="goTo('/user/')">
 					<img src="../../static/svg/user.svg" height="55%">
-					<span>User</span>
+					<span>用户</span>
 				</div>
 			</div>
 		</div>

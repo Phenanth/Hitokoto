@@ -5,9 +5,9 @@
 		<div class="usrinfo-header">
 			<div class="usrinfo-back">
 				<img src="../../static/svg/back.svg" width="25px">
-				<span v-on:click="goTo('/user/controller')">Back</span>
+				<span v-on:click="goTo('/user/controller')">返回</span>
 			</div>
-			<h2>User Info.</h2>
+			<h2>用户信息</h2>
 		</div>
 
 		<!-- Icon and Username -->
@@ -15,7 +15,7 @@
 			<div id="circle">
 				<img src="../../static/svg/Smile.svg" width="45px">
 			</div>
-			<span>User Name</span>
+			<span>用户名</span>
 		</div>
 
 		<!-- User Info. -->
@@ -25,21 +25,21 @@
 				<span class="info-text gray">2015210405001</span>
 			</div>
 			<div class="info-box">
-				<span class="info-text">Sex</span>
+				<span class="info-text">性别</span>
 				<span class="info-text gray">F.</span>
 			</div>
 			<div class="info-box">
-				<span class="info-text">Phone</span>
+				<span class="info-text">联系电话</span>
 				<span class="info-text gray">18058395082</span>
 			</div>
 			<div class="info-box">
-				<span class="info-text">We Chat</span>
+				<span class="info-text">微信账号</span>
 				<span class="info-text gray">???</span>
 			</div>
 		</div>
 
 		<div class="usrinfo-ctl">
-			<button class="btn btn-logout" v-on:click="alertNotFinished()">Log out</button>
+			<button class="btn btn-logout" v-on:click="alertNotFinished()">注销</button>
 		</div>
 	</div>
 </template>
